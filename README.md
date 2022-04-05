@@ -45,7 +45,15 @@ Configure the Server:
 
 Configure the database: 
 -Create a mongoDB database called "ProjectVigilant" 
--Add two collections, one called "Users" and the other called "Cities"
+-Add two collections, one called "Users" and the other called "Cities
+-Add cities to the Cities collection by making a document with the structure
+{
+_id: An id that mongoDB will assign automatically
+City:"City Name"
+Country: "Country Name"
+State: "StateName"
+emergency: 1 | 0 1 indicating that an emergency is in progress in this city and 0 indicating that all is well
+}
 
 
 From here the app should be able to communicate to the server and the server
